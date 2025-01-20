@@ -4,71 +4,276 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panza Mesias & Asociados</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Fuentes profesionales -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            font-family: 'Merriweather', serif;
+            background-color: #F5F5F5;
+            color: #333333;
+        }
+
+        /* Encabezado */
+        .header {
+            background-color: #333333;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            color: #25D366; /* Verde WhatsApp */
+        }
+
+        .title {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        /* Intro */
+        .intro {
+            background-image: url('fondo-campo.jpg');
+            background-size: cover;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .intro h2 {
+            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+        }
+
+        /* Secciones */
+        .section {
+            padding: 20px;
+            border-bottom: 1px solid #DDD;
+        }
+
+        /* Acordeón */
+        .accordion-item {
+            margin-bottom: 10px;
+        }
+
+        .accordion-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background-color: #3B5323;
+            color: #FFFFFF;
+            border: none;
+            text-align: left;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .accordion-title.active {
+            background-color: #25D366; /* Verde WhatsApp */
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 10px;
+            font-size: 1rem;
+        }
+
+        /* Horarios */
+        .horarios h2 {
+            font-size: 2rem;
+            color: #3B5323;
+        }
+
+        .horarios p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333333;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Iconos flotantes */
+        .floating-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .floating-icons a {
+            width: 50px;
+            height: 50px;
+            background-color: #25D366;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .floating-icons .email-icon {
+            background-color: #007BFF; /* Azul correo */
+        }
+
+        .floating-icons a:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Panza Mesias & Asociados</h1>
-        <nav>
+    <header class="header">
+        <h1 class="title"><i class="fas fa-scale-balanced"></i> Panza Mesias & Asociados</h1>
+        <nav class="nav">
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
             <a href="#quienes-somos">Quiénes Somos</a>
+            <a href="#horarios">Horarios</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
     <main>
         <!-- Sección Inicio -->
-        <section id="inicio">
-            <h2>Bienvenidos a Panza Mesias & Asociados</h2>
-            <p>En Panza Mesias & Asociados nos dedicamos a ofrecer soluciones legales personalizadas, trabajando con compromiso y profesionalismo para cada uno de nuestros clientes. Nuestro enfoque está en generar confianza y brindarte la comodidad que necesitas durante todo el proceso legal. Nos especializamos en acompañarte en cada paso, asegurando resultados efectivos y la tranquilidad que mereces.</p>
-            <p><strong>¡No lo dudes! Haz tu consulta sin cargo. Escríbenos por WhatsApp y da el primer paso hoy mismo.</strong></p>
+        <section id="inicio" class="intro">
+            <h2>Bienvenidos</h2>
+            <p>En Panza Mesias & Asociados nos dedicamos a ofrecer soluciones legales personalizadas, trabajando con compromiso y profesionalismo.</p>
         </section>
         
         <!-- Sección Servicios -->
-        <section id="servicios">
+        <section id="servicios" class="section">
             <h2>Nuestros Servicios</h2>
-            <ul>
-                <li><strong>Derecho Laboral:</strong> Resolución de conflictos laborales, asesoramiento a empresas, defensa de los derechos de trabajadores y empleadores.</li>
-                <li><strong>ART:</strong> Acompañamiento y asesoramiento en casos de accidentes laborales, asegurando la protección de tus derechos.</li>
-                <li><strong>Derecho de Familia:</strong> Divorcios, acuerdos de alimentos, régimen de comunicación, uniones convivenciales y guarda de menores.</li>
-                <li><strong>Sucesiones:</strong> Acompañamiento integral en herencias y testamentos para garantizar un proceso eficiente y transparente.</li>
-                <li><strong>Derecho Penal:</strong> Representación legal especializada en casos penales.</li>
-                <li><strong>Derecho Administrativo:</strong> Asesoramiento en gestiones administrativas y resolución de conflictos con organismos públicos.</li>
-                <li><strong>Accidentes de Tránsito:</strong> Reclamos por daños, perjuicios y asesoramiento legal en siniestros viales.</li>
-                <li><strong>Derechos Reales:</strong> Asesoramiento y resolución de conflictos relacionados con la propiedad y bienes inmuebles.</li>
-                <li><strong>Jubilaciones:</strong> Te ayudamos a tramitar tu jubilación, reajustes y pensiones, asegurando el acceso a tus derechos previsionales.</li>
-                <li><strong>Concursos y Quiebras:</strong> Asesoramiento integral para empresas y personas físicas en procesos concursales y de quiebra, ayudándote a encontrar soluciones legales frente a crisis financieras.</li>
-            </ul>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-title">Derecho Laboral</button>
+                    <div class="accordion-content">
+                        <p>Resolución de conflictos laborales y defensa de los derechos del trabajador.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-title">Derecho de Familia</button>
+                    <div class="accordion-content">
+                        <p>Divorcios, régimen de comunicación, alimentos y más.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-title">Sucesiones</button>
+                    <div class="accordion-content">
+                        <p>Asesoramiento integral en herencias y testamentos.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-title">Derechos Reales</button>
+                    <div class="accordion-content">
+                        <p>Redacción de contratos, asesoramiento y resolución de conflictos vinculados a la propiedad.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-title">Jubilaciones</button>
+                    <div class="accordion-content">
+                        <p>Gestión y asesoramiento en trámites de jubilación.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-title">Concursos y Quiebras</button>
+                    <div class="accordion-content">
+                        <p>Acompañamiento integral en procesos concursales.</p>
+                    </div>
+                </div>
+            </div>
         </section>
         
         <!-- Sección Quiénes Somos -->
-        <section id="quienes-somos">
+        <section id="quienes-somos" class="section">
             <h2>Quiénes Somos</h2>
-            <p>En Panza Mesias & Asociados creemos en construir relaciones basadas en la confianza y el compromiso. Sabemos que cada caso es único, por eso nos enfocamos en escucharte, comprender tus necesidades y acompañarte en todo momento.</p>
-            <p>Nuestro equipo de abogados combina experiencia y profesionalismo con un trato cercano y humano, asegurándonos de que te sientas apoyado durante todo el proceso. Estamos aquí para ayudarte a encontrar las mejores soluciones legales y brindarte la tranquilidad que necesitas.</p>
-            <p>En cada paso del camino, estaremos a tu lado, porque tu confianza es nuestra mayor responsabilidad.</p>
+            <p>
+                En Panza Mesias & Asociados, somos un estudio jurídico integral que ofrece soluciones legales personalizadas, con un enfoque en la confianza, el compromiso y la cercanía. Contamos con un equipo multidisciplinario de abogados especializados en distintas áreas del derecho. Nuestra prioridad es brindarte la tranquilidad y el respaldo que necesitás en cada etapa de tu caso. Valoramos la confidencialidad, la ética y la transparencia, asegurándonos de trabajar siempre a tu lado para alcanzar los mejores resultados.
+            </p>
         </section>
-        
+
+        <!-- Sección Horarios -->
+        <section id="horarios" class="section horarios">
+            <h2>Horarios de Atención</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-title">Horarios de Atención por WhatsApp</button>
+                    <div class="accordion-content">
+                        <p>Lunes a Viernes de 8:00 hs a 12:30 hs y de 17:00 hs a 21:00 hs.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-title">Atención Virtual</button>
+                    <div class="accordion-content">
+                        <p>¡Agenda tu turno ahora!</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-title">Atención Presencial</button>
+                    <div class="accordion-content">
+                        <p>Se atiende en nuestras oficinas de Maipú y Guaymallén. ¡Escribinos y coordinemos la mejor opción para vos!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Sección Contacto -->
-        <section id="contacto">
+        <section id="contacto" class="section">
             <h2>Contacto</h2>
-            <p>¿Necesitas asesoramiento legal? No lo dudes, ¡haz tu consulta sin cargo! Escríbenos por WhatsApp y obtén la guía que necesitas.</p>
-            <p><strong>El momento es ahora. No esperes más, contáctanos y empieza a resolver tus inquietudes legales hoy mismo.</strong></p>
-            <ul>
-                <li><strong>Teléfono:</strong> <a href="tel:+542612066631">2612066631</a></li>
-                <li><strong>Email:</strong> <a href="mailto:estudiojuridicopanzamesias@gmail.com">estudiojuridicopanzamesias@gmail.com</a></li>
-                <li><strong>Direcciones y horarios:</strong>
-                    <ul>
-                        <li><strong>Maipú:</strong> Ozamis 249. <strong>Horarios:</strong> Martes y jueves de 17:00 a 21:00.</li>
-                        <li><strong>Guaymallén:</strong> Florida 339. <strong>Horarios:</strong> Lunes de 17:00 a 21:00.</li>
-                    </ul>
-                </li>
-                <li><strong>WhatsApp:</strong> <a href="https://wa.me/542612066631" target="_blank">Haz clic aquí para escribirnos directamente.</a> Disponible de lunes a viernes de 8:00 a 12:30 y de 17:00 a 21:00.</li>
-            </ul>
+            <p>¿Tienes dudas legales? ¡Haz tu consulta sin cargo!</p>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Panza Mesias & Asociados. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <p>&copy; 2025 Panza Mesias & Asociados - Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Botones flotantes -->
+    <div class="floating-icons">
+        <a href="https://wa.me/542612066631" target="_blank" class="whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="mailto:estudiojuridicopanzamesias@gmail.com" target="_blank" class="email-icon">
+            <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+
+    <script>
+        // Funcionalidad de acordeón
+        document.querySelectorAll('.accordion-title').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                button.classList.toggle('active');
+                if (button.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } else {
+                    content.style.maxHeight = null;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
